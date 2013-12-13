@@ -1,0 +1,24 @@
+{
+  "name": "rework-breakpoints",
+  "version": "0.2.1",
+  "description": "Adding a nice syntax for handling media query breakpoints for different devices for rework",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec"
+  },
+  "repository": "git://github.com/klei-dev/rework-breakpoints.git",
+  "keywords": [
+    "rework",
+    "rework-plugins",
+    "css",
+    "breakpoints",
+    "media query"
+  ],
+  "author": "Joakim Bengtson <joakim@klei.se>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.15.1",
+    "rework": "~0.18.3",
+    "chai": "~1.8.1"
+  }
+}
