@@ -22,4 +22,11 @@ describe('rework-breakpoints', function(){
       .toString()
       .should.equal(css.out('breakpoints'));
   });
+
+  it('should be able to handle breakpoints declared with the "var-" syntax', function(){
+    rework(css.in('breakpointsVar'))
+      .use(breakpoints)
+      .toString()
+      .should.equal(css.out('breakpoints'));
+  });
 });

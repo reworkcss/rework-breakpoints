@@ -1,8 +1,8 @@
 :root {
-  breakpoint-palm: max 300px;
-  breakpoint-tab: max 700px;
-  breakpoint-desk: min 1000px;
-  breakpoint-desk-wide: min 1200px;
+  var-breakpoint-palm: max 300px;
+  var-breakpoint-tab: max 700px;
+  var-breakpoint-desk: min 1000px;
+  var-breakpoint-desk-wide: min 1200px;
 }
 
 .palm {
