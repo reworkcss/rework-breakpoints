@@ -29,4 +29,11 @@ describe('rework-breakpoints', function(){
       .toString()
       .should.equal(css.out('breakpoints'));
   });
+
+  it('should be able to handle breakpoints with elastic units', function(){
+    rework(css.in('breakpointsEm'))
+      .use(breakpoints)
+      .toString()
+      .should.equal(css.out('breakpointsEm'));
+  });
 });

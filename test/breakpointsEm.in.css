@@ -1,0 +1,40 @@
+:root {
+  breakpoint-palm: max 20em;
+  breakpoint-tab: max 40em;
+  breakpoint-desk: min 60rem;
+  breakpoint-desk-wide: min 80rem;
+}
+
+.palm {
+  display: none;
+}
+
+@media palm {
+  .palm {
+    display: block;
+  }
+}
+
+@media tab {
+  .tab-hide {
+    display: none;
+  }
+}
+
+@media tab-and-down {
+  body {
+    font-size: 80%;
+  }
+}
+
+@media tab-and-up {
+  header img {
+    float: left;
+  }
+}
+
+@media desk-wide {
+  body {
+    font-size: 2em;
+  }
+}

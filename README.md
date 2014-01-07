@@ -31,7 +31,7 @@ A breakpoint is declared with: `breakpoint-<name>: <type> <point>`, where:
 
   * `<name>` - is the name for the breakpoint (to use in your media query)
   * `<type>` - values: `min` or `max`
-  * `<point>` - the actual breakpoint value in pixels (px)
+  * `<point>` - the actual breakpoint value in px, em or rem
 
 **Note** A breakpoint can be declared with `var-breakpoint-<name>` as well, for a valid CSS syntax.
 
@@ -59,7 +59,7 @@ A breakpoint is declared with: `breakpoint-<name>: <type> <point>`, where:
 
 ```css
 :root {
-  var-breakpoint-desk: min 1000px;
+  var-breakpoint-desk: min 80em;
 }
 
 @media desk {
@@ -70,7 +70,7 @@ A breakpoint is declared with: `breakpoint-<name>: <type> <point>`, where:
 **yields**:
 
 ```css
-@media only screen and (min-device-width: 1000px) {
+@media only screen and (min-device-width: 80em) {
   /* styles... */
 }
 ```

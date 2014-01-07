@@ -1,0 +1,33 @@
+.palm {
+  display: none;
+}
+
+@media only screen and (max-device-width: 20em) {
+  .palm {
+    display: block;
+  }
+}
+
+@media only screen and (min-device-width: 20.0001em) and (max-device-width: 40em) {
+  .tab-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 40em) {
+  body {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 20.0001em) {
+  header img {
+    float: left;
+  }
+}
+
+@media only screen and (min-device-width: 80rem) {
+  body {
+    font-size: 2em;
+  }
+}
