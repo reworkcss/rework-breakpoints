@@ -1,6 +1,6 @@
 {
   "name": "rework-breakpoints",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Adding a nice syntax for handling media query breakpoints for different devices for rework",
   "main": "index.js",
   "scripts": {
