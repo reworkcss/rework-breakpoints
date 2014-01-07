@@ -27,7 +27,7 @@ For available plugins see plugins section below.
 Gives you a maintainable solution to handling media query breakpoints
 for different devices, with a syntax that's easy to remember.
 
-A breakpoint is declared with: `var-breakpoint-<name>: <type> <point>`, where:
+A breakpoint is declared with: `breakpoint-<name>: <type> <point>`, where:
 
   * `<name>` - is the name for the breakpoint (to use in your media query)
   * `<type>` - values: `min` or `max`
@@ -37,7 +37,7 @@ A breakpoint is declared with: `var-breakpoint-<name>: <type> <point>`, where:
 
 ```css
 :root {
-  var-breakpoint-mobile: max 340px;
+  breakpoint-mobile: max 340px;
 }
 
 @media mobile {
@@ -57,7 +57,7 @@ A breakpoint is declared with: `var-breakpoint-<name>: <type> <point>`, where:
 
 ```css
 :root {
-  var-breakpoint-desk: min 1000px;
+  breakpoint-desk: min 1000px;
 }
 
 @media desk {
@@ -77,10 +77,10 @@ A breakpoint is declared with: `var-breakpoint-<name>: <type> <point>`, where:
 
 ```css
 :root {
-  var-breakpoint-palm: max 340px;
-  var-breakpoint-tab: max 700px;
-  var-breakpoint-desk: min 1000px;
-  var-breakpoint-desk-wide: min 1200px;
+  breakpoint-palm: max 340px;
+  breakpoint-tab: max 700px;
+  breakpoint-desk: min 1000px;
+  breakpoint-desk-wide: min 1200px;
 }
 
 @media palm {
