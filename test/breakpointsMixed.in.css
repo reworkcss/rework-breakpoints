@@ -1,0 +1,10 @@
+:root {
+  breakpoint-mobile: max 600px;
+  breakpoint-landscape: (orientation: landscape);
+}
+
+@media mobile and landscape {
+  body {
+    color: #c00;
+  }
+}

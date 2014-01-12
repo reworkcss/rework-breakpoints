@@ -55,5 +55,12 @@ describe('rework-breakpoints', function(){
       .trim()
       .should.equal(css.out('breakpointsDevice').trim());
   });
+
+  it('should be able to mix breakpoint names with custom breakpoints in media queries', function(){
+    rework(css.in('breakpointsMixed'))
+      .use(breakpoints)
+      .toString()
+      .trim()
+      .should.equal(css.out('breakpointsMixed').trim());
   });
 });
