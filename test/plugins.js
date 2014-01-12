@@ -20,20 +20,40 @@ describe('rework-breakpoints', function(){
     rework(css.in('breakpoints'))
       .use(breakpoints)
       .toString()
-      .should.equal(css.out('breakpoints'));
+      .trim()
+      .should.equal(css.out('breakpoints').trim());
   });
 
   it('should be able to handle breakpoints declared with the "var-" syntax', function(){
     rework(css.in('breakpointsVar'))
       .use(breakpoints)
       .toString()
-      .should.equal(css.out('breakpoints'));
+      .trim()
+      .should.equal(css.out('breakpoints').trim());
   });
 
   it('should be able to handle breakpoints with elastic units', function(){
     rework(css.in('breakpointsEm'))
       .use(breakpoints)
       .toString()
-      .should.equal(css.out('breakpointsEm'));
+      .trim()
+      .should.equal(css.out('breakpointsEm').trim());
+  });
+
+  it('should be able to handle custom breakpoints', function(){
+    rework(css.in('breakpointsCustom'))
+      .use(breakpoints)
+      .toString()
+      .trim()
+      .should.equal(css.out('breakpointsCustom').trim());
+  });
+
+  it('should use min|max-device-width when `breakpoints-device` option is set', function(){
+    rework(css.in('breakpointsDevice'))
+      .use(breakpoints)
+      .toString()
+      .trim()
+      .should.equal(css.out('breakpointsDevice').trim());
+  });
   });
 });

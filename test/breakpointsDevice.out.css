@@ -1,0 +1,33 @@
+.palm {
+  display: none;
+}
+
+@media only screen and (max-device-width: 300px) {
+  .palm {
+    display: block;
+  }
+}
+
+@media only screen and (min-device-width: 301px) and (max-device-width: 700px) {
+  .tab-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 700px) {
+  body {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 301px) {
+  header img {
+    float: left;
+  }
+}
+
+@media only screen and (min-device-width: 1200px) {
+  body {
+    font-size: 2em;
+  }
+}

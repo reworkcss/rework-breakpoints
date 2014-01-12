@@ -1,0 +1,9 @@
+:root {
+  breakpoint-custom: screen and (min-width: 80em);
+}
+
+@media custom {
+  body {
+    color: #c00;
+  }
+}
