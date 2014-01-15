@@ -1,7 +1,8 @@
 rework-breakpoints
 ===================
 
-**NOTE** Version v.0.5 uses `min|max-width` by default. To keep old behavior see *Options* below. Also the mixed syntax is new (see *Example 4* below).
+**NOTE** Version v.0.5 uses `min|max-width` by default. To keep old behavior see *Options* below. Also the mixed syntax is new (see *Example 5* below).
+**NOTE** Version v.0.6 uses `screen` instead of `only screen` by default. See *Options* below for how to keep old behavior.
 
 Adding a nice syntax for handling media query breakpoints for different devices for the CSS Preprocessor [rework](https://github.com/reworkcss/rework).
 
@@ -54,6 +55,20 @@ Set it in your CSS like so:
 }
 ```
 
+#### `breakpoints-use-only`
+
+If set the type/point syntax will generate media queries with `only screen` instead of the default `screen`.
+
+Set it in your CSS like so:
+
+```css
+:root {
+  breakpoints-use-only: true; /* `yes` or `1` works as well */
+  /* OR */
+  var-breakpoints-use-only: true;
+}
+```
+
 ### Examples
 
 #### Example 1 - max breakpoint
@@ -71,12 +86,33 @@ Set it in your CSS like so:
 **yields**:
 
 ```css
+@media screen and (max-width: 340px) {
+  /* styles... */
+}
+```
+
+#### Example 2 - max breakpoint (using `breakpoints-use-only` option)
+
+```css
+:root {
+  breakpoints-use-only: true;
+  breakpoint-mobile: max 340px;
+}
+
+@media mobile {
+  /* all your mobile device styles goes here */
+}
+```
+
+**yields**:
+
+```css
 @media only screen and (max-width: 340px) {
   /* styles... */
 }
 ```
 
-#### Example 2 - min breakpoint (using `var-` prefix)
+#### Example 3 - min breakpoint (using `var-` prefix)
 
 ```css
 :root {
@@ -91,12 +127,12 @@ Set it in your CSS like so:
 **yields**:
 
 ```css
-@media only screen and (min-width: 80em) {
+@media screen and (min-width: 80em) {
   /* styles... */
 }
 ```
 
-#### Example 3 - multiple breakpoints (using `breakpoints-device` option)
+#### Example 4 - multiple breakpoints (using `breakpoints-device` option)
 
 ```css
 :root {
@@ -133,30 +169,30 @@ Set it in your CSS like so:
 **yields**:
 
 ```css
-@media only screen and (max-device-width: 340px) {
+@media screen and (max-device-width: 340px) {
   /* styles... */
 }
-@media only screen and (min-device-width: 341px) and (max-device-width: 700px) {
+@media screen and (min-device-width: 341px) and (max-device-width: 700px) {
   /* all tablet styles */
 }
-@media only screen and (max-device-width: 700px) {
+@media screen and (max-device-width: 700px) {
   /* styles for tablets and smaller devices */
 }
-@media only screen and (min-device-width: 341px) {
+@media screen and (min-device-width: 341px) {
   /* styles for tablets and bigger screens */
 }
-@media only screen and (max-device-width: 1199px) {
+@media screen and (max-device-width: 1199px) {
   /* styles for desktops and smaller devices */
 }
-@media only screen and (min-device-width: 1000px) {
+@media screen and (min-device-width: 1000px) {
   /* styles for desktop and bigger screens */
 }
-@media only screen and (min-device-width: 1200px) {
+@media screen and (min-device-width: 1200px) {
   /* styles for big screens */
 }
 ```
 
-#### Example 4 - mixed breakpoints
+#### Example 5 - mixed breakpoints
 
 ```css
 :root {
@@ -174,7 +210,7 @@ Set it in your CSS like so:
 **yields**:
 
 ```css
-@media only screen and (max-width: 600px) and (orientation: landscape) {
+@media screen and (max-width: 600px) and (orientation: landscape) {
   body {
     color: #c00;
   }

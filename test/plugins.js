@@ -64,6 +64,14 @@ describe('rework-breakpoints', function(){
       .should.equal(css.out('breakpointsDevice').trim());
   });
 
+  it('should use "only screen" when `breakpoints-use-only` option is set', function(){
+    rework(css.in('breakpointsOnly'))
+      .use(breakpoints)
+      .toString()
+      .trim()
+      .should.equal(css.out('breakpointsOnly').trim());
+  });
+
   it('should be able to mix breakpoint names with custom breakpoints in media queries', function(){
     rework(css.in('breakpointsMixed'))
       .use(breakpoints)

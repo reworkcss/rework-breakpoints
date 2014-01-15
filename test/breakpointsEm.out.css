@@ -2,31 +2,31 @@
   display: none;
 }
 
-@media only screen and (max-width: 20em) {
+@media screen and (max-width: 20em) {
   .palm {
     display: block;
   }
 }
 
-@media only screen and (min-width: 20.0001em) and (max-width: 40em) {
+@media screen and (min-width: 20.0001em) and (max-width: 40em) {
   .tab-hide {
     display: none;
   }
 }
 
-@media only screen and (max-width: 40em) {
+@media screen and (max-width: 40em) {
   body {
     font-size: 80%;
   }
 }
 
-@media only screen and (min-width: 20.0001em) {
+@media screen and (min-width: 20.0001em) {
   header img {
     float: left;
   }
 }
 
-@media only screen and (min-width: 80rem) {
+@media screen and (min-width: 80rem) {
   body {
     font-size: 2em;
   }
