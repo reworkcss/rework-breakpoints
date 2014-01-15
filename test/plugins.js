@@ -24,6 +24,14 @@ describe('rework-breakpoints', function(){
       .should.equal(css.out('breakpoints').trim());
   });
 
+  it('shouldn\'t crash when a declaration has an empty property or value', function(){
+    rework(css.in('breakpointsEmpty'))
+      .use(breakpoints)
+      .toString()
+      .trim()
+      .should.equal(css.out('breakpointsEmpty').trim());
+  });
+
   it('should be able to handle breakpoints declared with the "var-" syntax', function(){
     rework(css.in('breakpointsVar'))
       .use(breakpoints)

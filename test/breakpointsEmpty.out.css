@@ -1,0 +1,39 @@
+:root {
+  /* inline comment */
+  /*breakpoint-empty: max 1300px;*/
+}
+
+.palm {
+  display: none;
+}
+
+@media only screen and (max-width: 300px) {
+  .palm {
+    display: block;
+    /* inline comment */
+  }
+}
+
+@media only screen and (min-width: 301px) and (max-width: 700px) {
+  .tab-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-width: 301px) {
+  header img {
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 2em;
+  }
+}
