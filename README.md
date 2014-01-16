@@ -192,6 +192,14 @@ Set it in your CSS like so:
 }
 ```
 
+##### About the `-and-up|down` syntax
+
+If the `<type> <point>` syntax is used and there's at least two points per type, e.g. a breakpoint at `max 30em` and one at `max 60em`, then it's also possible to use the `-and-up|down` syntax for those breakpoints.
+
+**Note though**, that it's only possible to use the `-and-up|down` syntax when it makes sense, i.e. with the breakpoints `breakpoint-palm: max 30em` and `breakpoint-tab: max 60em` the use of `palm-and-down` is not possible, because that's already what `palm` means in that case.
+
+**To clarify:** the `<nam>-and-down` does not exist for the first `max` breakpoint, and likewise does `<name>-and-up` not exist for the last `min` breakpoint.
+
 #### Example 5 - mixed breakpoints
 
 ```css
